@@ -5,7 +5,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Production builds
-/build
+# /build  <- comment out เพื่อให้ build folder ถูก commit
 /dist
 
 # Environment variables
