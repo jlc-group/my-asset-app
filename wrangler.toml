@@ -1,0 +1,10 @@
+name = "my-asset-app"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "build"
+
+[env.production]
+name = "my-asset-app"
+route = "my-asset-app.pages.dev"
+
+[vars]
+NODE_ENV = "production"
