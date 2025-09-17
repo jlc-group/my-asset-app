@@ -18,11 +18,11 @@ Project name: my-asset-app
 Production branch: main
 Build command: (เว้นว่างไว้)
 Build output directory: build
-Deploy command: (เว้นว่างไว้ - ไม่ต้องใส่เพราะใช้ GitHub integration)
+Deploy command: echo "Static files ready for deployment"
 Root directory: (เว้นว่างไว้)
 ```
 
-**สำคัญ:** ไม่ต้องใส่ Deploy command เพราะ Cloudflare Pages จะ deploy โดยอัตโนมัติจาก build output directory
+**หากบังคับต้องใส่ Deploy command ให้ใช้:** `echo "Static files ready for deployment"`
 
 ### ขั้นตอนที่ 4: Deploy และ Auto-Update
 1. คลิก **"Save and Deploy"**
