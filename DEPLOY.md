@@ -16,13 +16,13 @@
 ```
 Project name: my-asset-app
 Production branch: main
-Build command: (เว้นว่างไว้ - ไม่ต้องใส่เพราะเป็น static files)
+Build command: (เว้นว่างไว้)
 Build output directory: build
-Deploy command: npm run deploy
+Deploy command: (เว้นว่างไว้ - ไม่ต้องใส่เพราะใช้ GitHub integration)
 Root directory: (เว้นว่างไว้)
 ```
 
-**หมายเหตุ:** ใช้ `npm run deploy` แทน `wrangler pages deploy build` เพื่อให้ใช้ wrangler ที่ติดตั้งใน node_modules
+**สำคัญ:** ไม่ต้องใส่ Deploy command เพราะ Cloudflare Pages จะ deploy โดยอัตโนมัติจาก build output directory
 
 ### ขั้นตอนที่ 4: Deploy และ Auto-Update
 1. คลิก **"Save and Deploy"**
