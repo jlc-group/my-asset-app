@@ -18,8 +18,11 @@ Project name: my-asset-app
 Production branch: main
 Build command: (เว้นว่างไว้ - ไม่ต้องใส่เพราะเป็น static files)
 Build output directory: build
+Deploy command: npm run deploy
 Root directory: (เว้นว่างไว้)
 ```
+
+**หมายเหตุ:** ใช้ `npm run deploy` แทน `wrangler pages deploy build` เพื่อให้ใช้ wrangler ที่ติดตั้งใน node_modules
 
 ### ขั้นตอนที่ 4: Deploy และ Auto-Update
 1. คลิก **"Save and Deploy"**
