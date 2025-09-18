@@ -4,6 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const axios = require("axios");
 const path = require("path");
+const open = require("open");
 
 const app = express();
 app.use(cors()); // หรือกำหนด origin เฉพาะได้
@@ -47,6 +48,21 @@ app.get('*', (req, res) => {
 });
 
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`Node Proxy Server running on port ${PORT}`);
+const HOST = '0.0.0.0'; // Bind to all IPv4 addresses
+
+app.listen(PORT, HOST, async () => {
+  const url = `http://localhost:${PORT}`;
+
+  console.log(`\n🚀 Server is running!`);
+  console.log(`📍 Local:    ${url}`);
+  console.log(`📍 Network:  http://${HOST}:${PORT}`);
+  console.log(`\n✨ Opening browser automatically...\n`);
+
+  // เปิด browser อัตโนมัติ
+  try {
+    await open(url);
+  } catch (error) {
+    console.log('Could not open browser automatically');
+    console.log(`Please open your browser and go to: ${url}`);
+  }
 });
