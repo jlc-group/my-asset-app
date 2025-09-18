@@ -5,8 +5,8 @@ export async function onRequestPost({ request, env }) {
     const formData = await request.json();
     console.log("Received from client:", formData);
 
-    // URL ของ Google Apps Script
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby_iiH0Nok4Lx-SMVmJzS7PMlG938Tep89YzwQ0OnvMeT_Vdy89rIjMxqn_spLYRSyQ/exec";
+    // URL ของ Google Apps Script (อ่านจากตัวแปรแวดล้อม หากไม่ได้กำหนดจะใช้ค่าเริ่มต้นนี้)
+    const GOOGLE_SCRIPT_URL = env.GOOGLE_SCRIPT_URL || "https://script.google.com/macros/s/AKfycby_iiH0Nok4Lx-SMVmJzS7PMlG938Tep89YzwQ0OnvMeT_Vdy89rIjMxqn_spLYRSyQ/exec";
 
     // ส่งข้อมูลไปยัง Google Apps Script
     const response = await fetch(GOOGLE_SCRIPT_URL, {
